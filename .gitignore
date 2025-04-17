@@ -1,0 +1,6 @@
+__pycache__/
+models/
+chats/
+mood_bank/
+*.gguf
+*.bin

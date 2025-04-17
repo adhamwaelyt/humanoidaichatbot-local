@@ -1,0 +1,6 @@
+transformers
+torch
+accelerate
+sentencepiece
+rich
+ctransformers

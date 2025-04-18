@@ -1,12 +1,9 @@
-# mood_system.py
-# Simulates emotional state of AI based on user input and session memory
-
 import os
 import json
 from datetime import datetime
 from collections import defaultdict
 
-MOOD_PATH = "mood_bank"
+MOOD_PATH = "chatbot/data/mood_bank"
 os.makedirs(MOOD_PATH, exist_ok=True)
 
 def mood_file_path(persona, session):
@@ -36,7 +33,7 @@ MOOD_KEYWORDS = {
 
 MOOD_EMOJIS = {
     "angry": "😠", "sad": "😢", "flirty": "😏", "friendly": "😊",
-    "curious": "🧐", "neutral": "😐"
+    "curious": "🤭", "neutral": "😐"
 }
 
 MOOD_RESPONSES = {
@@ -88,4 +85,4 @@ def inject_mood(persona, session):
 def show_mood_terminal(persona, session):
     mood_data = load_mood(persona, session)
     emoji = MOOD_EMOJIS.get(mood_data["mood"], "😐")
-    print(f"[italic]🧠 {persona}'s mood: {emoji} {mood_data['mood'].title()} ({mood_data['intensity']})[/italic]")
+    print(f"[italic]\U0001F9E0 {persona}'s mood: {emoji} {mood_data['mood'].title()} ({mood_data['intensity']})[/italic]")

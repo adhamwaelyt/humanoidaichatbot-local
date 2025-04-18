@@ -24,10 +24,9 @@ def GGUF_wrapper(model_path):
 
     model = CTransformersModel.from_pretrained(
         full_path,
-        model_type="llama",  # or "mistral" etc.
+        model_type="llama",  # update based on your model type if needed
         temperature=0.7,
         max_new_tokens=512,
     )
 
     return lambda prompt, **kwargs: [{"generated_text": model(prompt)}]
-

@@ -1,11 +1,9 @@
-# This module handles long-term memory, persona-specific memory banks, and session switching
-
 import os
 import json
 from datetime import datetime
 
-MEMORY_DIR = "memory_bank"
-CHAT_DIR = "chats"
+MEMORY_DIR = "chatbot/data/memory_bank"
+CHAT_DIR = "chatbot/data/chats"
 
 os.makedirs(MEMORY_DIR, exist_ok=True)
 os.makedirs(CHAT_DIR, exist_ok=True)
@@ -37,7 +35,7 @@ def remember_fact(user_input, persona):
             memory[timestamp] = fact
             save_memory(persona, memory)
             return f"🧠 Got it. I'll remember that: '{fact}'"
-        except Exception as e:
+        except Exception:
             return "⚠️ Sorry, I couldn't store that properly."
     return None
 

